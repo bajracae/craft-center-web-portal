@@ -8,7 +8,6 @@ module.exports = (app) => {
   });
 
   app.post(`/api/product`, async (req, res) => {
-    console.log("I am here");
     let product = await Product.create(req.body);
     return res.status(201).send({
       error: false,
